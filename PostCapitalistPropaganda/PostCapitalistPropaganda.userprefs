@@ -1,0 +1,18 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/setPlayerInfo.cs">
+    <Files>
+      <File FileName="Assets/movePlayer.cs" Line="38" Column="33" />
+      <File FileName="Assets/moveCamera.cs" Line="20" Column="3" />
+      <File FileName="Assets/setPlayerInfo.cs" Line="19" Column="21" />
+      <File FileName="Assets/script/realEstate.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/addPlayers.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/goTile.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/organizeGameSpaces.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
