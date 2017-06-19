@@ -10,27 +10,37 @@ public class realEstate : MonoBehaviour {
 		public string name;
 		public int price;
 		public int rent;
+		public Color category;
 		public int houses;
 		public int hotels;
 		public GameObject owner;
+		public int housePrice;
 
-		public PropertyTile(string thisName, int thisPrice, int thisRent){
+		public PropertyTile(string thisName, int thisPrice, int thisRent, Color thisColor,int thisHousePrice){
 			name = thisName;
 			price = thisPrice;
 			rent = thisRent;
+			category = thisColor;
+			housePrice = thisHousePrice;
 		}
 	}
 
 	public string tileName;
 	public int tilePrice;
 	public int tileRent;
+	public Color tileColor;
+	public int tileHousePrice;
 
 	public PropertyTile tile;
 
 	// Use this for initialization
 	void Awake () {
-		tile = new PropertyTile (tileName, tilePrice, tileRent);
+		tile = new PropertyTile (tileName, tilePrice, tileRent, tileColor,tileHousePrice);
+		GetComponent<MeshRenderer> ().material.color = tileColor;
+		updateText ();
+	}
 
+	public void updateText(){
 		Component[] tileText = GetComponentsInChildren (typeof(TextMesh));
 		foreach(TextMesh txt in tileText){
 			if(txt.gameObject.name == "Name"){
@@ -47,7 +57,20 @@ public class realEstate : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	public void setOwner(movePlayer buyer){
+		GameObject ownerText = new GameObject ("Owner");
+		ownerText.transform.parent = transform;
+		TextMesh textM = ownerText.AddComponent<TextMesh> ();
+		textM.text = buyer.gameObject.name;
+		textM.characterSize = 0.02f;
+		textM.fontSize = 65;
+		textM.color = new Color (0,0,0);
+		ownerText.transform.localPosition = new Vector3 (-0.452f,0.528f,-0.2f);
+		ownerText.transform.rotation = Quaternion.Euler(90,0,0);
+	}
+
+	public void updateRent(determineRent calc){
+		tile.rent = calc.rentCalc (this);
+		updateText ();
 	}
 }

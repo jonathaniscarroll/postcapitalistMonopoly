@@ -5,10 +5,13 @@ using UnityEngine;
 public class organizeGameSpaces : MonoBehaviour {
 
 	public List<GameObject> spaces;
+	public Dictionary<Color,int> colorList;
 
 	// Use this for initialization
 	void Start () {
 //		spaces = new List<GameObject> ();
+		colorList = new Dictionary<Color,int>();
+		groupColors (spaces);
 
 	}
 	
@@ -17,18 +20,22 @@ public class organizeGameSpaces : MonoBehaviour {
 		
 	}
 
-	void placement(List<GameObject> tileSet){
-		Vector3 pos;
-		int i = 0;
-		int side = 0;
+	void groupColors(List<GameObject> tileSet){
+
 
 		foreach (GameObject tile in tileSet) {
-			Debug.Log ("bloo");
-			if (side == 0 || side == 2) {
-				
-				tile.transform.position = new Vector3 (i,0,0);
+			if (tile.GetComponent<realEstate> () != null) {
+				realEstate prop = tile.GetComponent<realEstate> ();
+//				Debug.Log (prop.tile.category);
+				//add colors to a list of how many properties for each color category
+				if (colorList.ContainsKey(prop.tile.category)) {
+					colorList [prop.tile.category] = colorList [prop.tile.category] + 1;
+				} else {
+					colorList.Add (prop.tile.category, 1);
+				}
+//				Debug.Log (prop.tile.category + ": " + colorList [prop.tile.category]);
 			}
-			i++;
+
 		}
 	}
 }

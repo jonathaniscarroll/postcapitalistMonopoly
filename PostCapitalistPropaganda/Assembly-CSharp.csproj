@@ -50,16 +50,19 @@
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
-     <Compile Include="Assets\moveCamera.cs" />
-     <Compile Include="Assets\movePlayer.cs" />
+     <Compile Include="Assets\determineRent.cs" />
+     <Compile Include="Assets\fillDropDown.cs" />
+     <Compile Include="Assets\propertyUpgrade.cs" />
      <Compile Include="Assets\script\addPlayers.cs" />
      <Compile Include="Assets\script\goTile.cs" />
+     <Compile Include="Assets\script\moveCamera.cs" />
+     <Compile Include="Assets\script\movePlayer.cs" />
      <Compile Include="Assets\script\organizeGameSpaces.cs" />
      <Compile Include="Assets\script\realEstate.cs" />
-     <Compile Include="Assets\setPlayerInfo.cs" />
-     <Compile Include="Assets\takeTurns.cs" />
+     <Compile Include="Assets\script\setPlayerInfo.cs" />
+     <Compile Include="Assets\script\takeTurns.cs" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>/Users/jonathancarroll/Tough Guy Mountain/PostCapProp/PostCapitalistPropaganda/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>/Users/jonathancarroll/Tough Guy Mountain/PostCapProp/Monopoly/PostCapitalistPropaganda/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

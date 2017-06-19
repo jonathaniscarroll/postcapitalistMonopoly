@@ -40,6 +40,7 @@ public class addPlayers : MonoBehaviour {
 		}
 //		turns.populatePlayerDictionary (players);
 		GameObject.Find ("PlayerPanel").SetActive (false);
-		GameObject.Find ("TurnButton").SetActive (true);
+		GetComponent<takeTurns> ().Turn ();
+//		GameObject.Find ("TurnButton").SetActive (true);
 	}
 }

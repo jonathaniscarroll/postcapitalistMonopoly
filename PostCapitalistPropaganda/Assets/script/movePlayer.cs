@@ -13,6 +13,7 @@ public class movePlayer : MonoBehaviour {
 	{
 		public int money;
 		public int position;
+		public List<GameObject> owned;
 
 		public playerStats(int mon,int pos){
 			money = mon;
@@ -28,6 +29,9 @@ public class movePlayer : MonoBehaviour {
 		{
 			position = pos;
 		}
+		public void addProperty (GameObject prop){
+			owned.Add (prop);
+		}
 	}
 
 	private NavMeshAgent m_Agent;
@@ -35,7 +39,8 @@ public class movePlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		player = new playerStats (1500,0);
+		player = new playerStats (15000,0);
+		player.owned = new List<GameObject> ();
 //		Debug.Log (player.position);
 	}
 	
@@ -53,6 +58,6 @@ public class movePlayer : MonoBehaviour {
 //			Debug.Log (tiles);
 		}
 //		Debug.Log (tiles[destination].transform.position);
-		m_Agent.destination = tiles[destination].transform.position + new Vector3(0,1,0);
+		m_Agent.destination = tiles[destination].transform.position + new Vector3(0,0.5f,0);
 	}
 }
