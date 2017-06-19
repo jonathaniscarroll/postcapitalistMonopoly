@@ -46,6 +46,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Lexic\Demo\NameGenDemo.cs" />
+     <Compile Include="Assets\Lexic\Scripts\NameGenerator.cs" />
+     <Compile Include="Assets\Lexic\Scripts\Names\AccessoryNames.cs" />
+     <Compile Include="Assets\Lexic\Scripts\Names\ArmorNames.cs" />
+     <Compile Include="Assets\Lexic\Scripts\Names\BaseNames.cs" />
+     <Compile Include="Assets\Lexic\Scripts\Names\CelticFemaleNames.cs" />
+     <Compile Include="Assets\Lexic\Scripts\Names\CelticMaleNames.cs" />
+     <Compile Include="Assets\Lexic\Scripts\Names\DemonFemaleNames.cs" />
+     <Compile Include="Assets\Lexic\Scripts\Names\DemonMaleNames.cs" />
+     <Compile Include="Assets\Lexic\Scripts\Names\ExampleNames.cs" />
+     <Compile Include="Assets\Lexic\Scripts\Names\FantasyFemaleNames.cs" />
+     <Compile Include="Assets\Lexic\Scripts\Names\FantasyFemaleNames2.cs" />
+     <Compile Include="Assets\Lexic\Scripts\Names\FantasyMaleNames.cs" />
+     <Compile Include="Assets\Lexic\Scripts\Names\FantasyMaleNames2.cs" />
+     <Compile Include="Assets\Lexic\Scripts\Names\KingNames.cs" />
+     <Compile Include="Assets\Lexic\Scripts\Names\TownNames.cs" />
+     <Compile Include="Assets\Lexic\Scripts\Names\WeaponNames.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
      <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
@@ -61,6 +78,9 @@
      <Compile Include="Assets\script\realEstate.cs" />
      <Compile Include="Assets\script\setPlayerInfo.cs" />
      <Compile Include="Assets\script\takeTurns.cs" />
+     <Compile Include="Assets\simulateMonopoly.cs" />
+     <None Include="Assets\Lexic\Readme.txt" />
+     <None Include="Assets\Lexic\License.txt" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/jonathancarroll/Tough Guy Mountain/PostCapProp/Monopoly/PostCapitalistPropaganda/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
